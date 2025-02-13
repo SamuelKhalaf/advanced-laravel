@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "b3e8f4e6-87f2-4fc5-969e-cd38a6dac176",
+		"name": "Advanced_laravel_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41921237"
+	},
+	"item": [
+		{
+			"name": "register new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/register?name=Samuel&email=samuel@gmail.com&password=user samuel&password_confirmation=user samuel",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Samuel"
+						},
+						{
+							"key": "email",
+							"value": "samuel@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "user samuel"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "user samuel"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/login?email=samuel@gmail.com&password=user samuel",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "samuel@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "user samuel"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 4|v21IKVpsaJa1AvKGmplFBxyn8VsSWbhXK6GhfhFL77994e58",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/user",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/api/",
+			"type": "string"
+		}
+	]
+}
