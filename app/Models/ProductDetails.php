@@ -12,11 +12,12 @@ class ProductDetails extends Model
     protected $fillable = [
         'size',
         'color',
-        'prise',
+        'price',
         'product_id',
     ];
 
     public function product()
     {
         return $this->belongsTo(Product::class,'product_id','id');
-    }}
+    }
+}

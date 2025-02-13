@@ -69,6 +69,132 @@
 			"response": []
 		},
 		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 4|v21IKVpsaJa1AvKGmplFBxyn8VsSWbhXK6GhfhFL77994e58",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/products?title=product title&description=new new&size=30&color=green",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "product title"
+						},
+						{
+							"key": "description",
+							"value": "new new"
+						},
+						{
+							"key": "size",
+							"value": "30"
+						},
+						{
+							"key": "color",
+							"value": "green"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 4|v21IKVpsaJa1AvKGmplFBxyn8VsSWbhXK6GhfhFL77994e58",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/products/1?title=product title&description=new new&size=35&color=green&price=100",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products",
+						"1"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "product title"
+						},
+						{
+							"key": "description",
+							"value": "new new"
+						},
+						{
+							"key": "size",
+							"value": "35"
+						},
+						{
+							"key": "color",
+							"value": "green"
+						},
+						{
+							"key": "price",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 4|v21IKVpsaJa1AvKGmplFBxyn8VsSWbhXK6GhfhFL77994e58",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/products/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "get user data",
 			"request": {
 				"method": "GET",
