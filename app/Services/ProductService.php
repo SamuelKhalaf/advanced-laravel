@@ -21,7 +21,7 @@ class ProductService
     public function createProduct(array $data){
         $product = Product::create($data);
         $product->details()->create($data);
-        Event::dispatch(new newProductEmail($product));
+//        Event::dispatch(new newProductEmail($product));
         return $product;
     }
 
