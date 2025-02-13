@@ -47,4 +47,9 @@ abstract class BaseRequestFormApi {
     {
         return $this->_request->all();
     }
+
+    public function request()
+    {
+        return $this->_request;
+    }
 }

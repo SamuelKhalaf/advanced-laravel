@@ -27,4 +27,9 @@ class Product extends Model
     public function image(){
         return $this->morphOne("App\Models\Image", "imagable");
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

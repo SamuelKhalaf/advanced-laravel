@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\EmailController;
+use App\Http\Controllers\Api\ExcelController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\RegisterController;
 use Illuminate\Http\Request;
@@ -30,3 +31,6 @@ Route::group(['middleware' => 'auth:sanctum'] , function (){
 
     Route::get('/send_email' , [EmailController::class,'send']);
 });
+
+Route::get('export-excel' , [ExcelController::class , 'export']);
+Route::post('import-excel' , [ExcelController::class , 'import']);
