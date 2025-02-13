@@ -85,7 +85,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{url}}/products?title=product title&description=new new&size=30&color=green",
+					"raw": "{{url}}/products?title=lap top&description=this is a laptop&size=30&color=green&price=150",
 					"host": [
 						"{{url}}"
 					],
@@ -95,11 +95,11 @@
 					"query": [
 						{
 							"key": "title",
-							"value": "product title"
+							"value": "lap top"
 						},
 						{
 							"key": "description",
-							"value": "new new"
+							"value": "this is a laptop"
 						},
 						{
 							"key": "size",
@@ -108,6 +108,10 @@
 						{
 							"key": "color",
 							"value": "green"
+						},
+						{
+							"key": "price",
+							"value": "150"
 						}
 					]
 				}
@@ -217,6 +221,39 @@
 					],
 					"path": [
 						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send email",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4|v21IKVpsaJa1AvKGmplFBxyn8VsSWbhXK6GhfhFL77994e58",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/send_email",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"send_email"
 					]
 				}
 			},

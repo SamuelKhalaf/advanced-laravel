@@ -2,8 +2,10 @@
 
 namespace App\Services;
 
+use App\Events\newProductEmail;
 use App\Models\Product;
 use App\Models\User;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Hash;
 
 class ProductService
@@ -19,6 +21,7 @@ class ProductService
     public function createProduct(array $data){
         $product = Product::create($data);
         $product->details()->create($data);
+        Event::dispatch(new newProductEmail($product));
         return $product;
     }
 

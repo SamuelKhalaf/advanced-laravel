@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\EmailController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\RegisterController;
 use Illuminate\Http\Request;
@@ -23,4 +24,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('register' , [RegisterController::class , 'register']);
 Route::post('login' , [RegisterController::class , 'login']);
 
-Route::resource('/products' , ProductController::class)->middleware('auth:sanctum');
+
+Route::group(['middleware' => 'auth:sanctum'] , function (){
+    Route::resource('/products' , ProductController::class);
+
+    Route::get('/send_email' , [EmailController::class,'send']);
+});
