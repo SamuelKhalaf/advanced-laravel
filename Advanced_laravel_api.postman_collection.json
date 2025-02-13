@@ -258,6 +258,72 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "import product data",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/samuel/Downloads/export1.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/import-excel?file",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"import-excel"
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get third party api data",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/samuel/Downloads/export1.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/get-api",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"get-api"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
