@@ -170,6 +170,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         \Maatwebsite\Excel\ExcelServiceProvider::class,
         wdd\slug\SlugServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -186,6 +187,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
          'Excel' => \Maatwebsite\Excel\Facades\Excel::class,
+        'socialite' => Laravel\Socialite\Facades\Socialite::class,
     ])->toArray(),
 
 ];

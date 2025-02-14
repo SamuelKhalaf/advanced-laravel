@@ -9,6 +9,7 @@
         "guzzlehttp/guzzle": "^7.9",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
+        "laravel/socialite": "*",
         "laravel/tinker": "^2.8",
         "laraveldaily/laravel-charts": "^0.2.3",
         "maatwebsite/excel": "^3.1",

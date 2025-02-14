@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\ExcelController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\RegisterController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\SocialiteController;
 use App\Http\Controllers\ThirdPartyController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -43,3 +44,9 @@ Route::post('get-api' , [ThirdPartyController::class , 'index']);
 Route::get('/ads' , [AdsController::class,'ads']);
 
 Route::get('/charts' , [MainController::class,'charts']);
+
+Route::get('auth/google' , [SocialiteController::class,'redirectToGoogle']);
+Route::get('auth/google/callback' , [SocialiteController::class,'handleGoogleCallback']);
+
+Route::get('auth/facebook' , [SocialiteController::class,'redirectToFacebook']);
+Route::get('auth/facebook/callback' , [SocialiteController::class,'handleFacebookCallback']);
