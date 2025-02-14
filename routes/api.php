@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdsController;
 use App\Http\Controllers\Api\EmailController;
 use App\Http\Controllers\Api\ExcelController;
 use App\Http\Controllers\Api\ProductController;
@@ -38,3 +39,6 @@ Route::post('import-excel' , [ExcelController::class , 'import']);
 
 
 Route::post('get-api' , [ThirdPartyController::class , 'index']);
+
+
+Route::get('/ads' , [AdsController::class,'ads']);

@@ -6,11 +6,12 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
-        "guzzlehttp/guzzle": "^7.2",
+        "guzzlehttp/guzzle": "^7.9",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
-        "maatwebsite/excel": "^3.1"
+        "maatwebsite/excel": "^3.1",
+        "seyyedam7/laravel-html-parser": "^2.2"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -30,7 +31,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "wdd\\slug\\": "packages/wdd_slug/src/"
         }
     },
     "scripts": {

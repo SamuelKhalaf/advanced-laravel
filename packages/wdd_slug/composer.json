@@ -1,0 +1,13 @@
+{
+    "name": "wdd/slug",
+    "description": "slug creator",
+    "type": "library",
+    "license": "mit",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "wdd\\slug\\": "src/"
+        }
+    }
+}

@@ -7,6 +7,7 @@ use App\Models\Product;
 use App\Models\User;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Hash;
+use wdd\slug\functions\SlugGen;
 
 class ProductService
 {
@@ -19,6 +20,9 @@ class ProductService
     }
 
     public function createProduct(array $data){
+        // use the slug generator package
+        $slugGen = new SlugGen();
+        $data['title'] = $slugGen->generate($data['title']);
         $product = Product::create($data);
         $product->details()->create($data);
 //        Event::dispatch(new newProductEmail($product));
