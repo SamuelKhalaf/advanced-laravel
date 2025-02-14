@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\EmailController;
 use App\Http\Controllers\Api\ExcelController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\RegisterController;
+use App\Http\Controllers\MainController;
 use App\Http\Controllers\ThirdPartyController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -37,8 +38,8 @@ Route::group(['middleware' => 'auth:sanctum'] , function (){
 Route::get('export-excel' , [ExcelController::class , 'export']);
 Route::post('import-excel' , [ExcelController::class , 'import']);
 
-
 Route::post('get-api' , [ThirdPartyController::class , 'index']);
 
-
 Route::get('/ads' , [AdsController::class,'ads']);
+
+Route::get('/charts' , [MainController::class,'charts']);
