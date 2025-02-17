@@ -33,7 +33,13 @@ Route::post('login' , [RegisterController::class , 'login']);
 
 
 Route::group(['middleware' => 'auth:sanctum'] , function (){
-    Route::resource('/products' , ProductController::class);
+    Route::get('/products' , [ProductController::class,'index'])->middleware('can:viewAny,App\Models\Product');
+    Route::get('/products/create' , [ProductController::class,'create'])->middleware('can:create,App\Models\Product');
+    Route::post('/products/store' , [ProductController::class,'store'])->middleware('can:create,App\Models\Product');
+    Route::get('/products/{product}/edit' , [ProductController::class,'edit'])->middleware('can:update,App\Models\Product');
+    Route::put('/products/{product}' , [ProductController::class,'update'])->middleware('can:update,App\Models\Product');
+    Route::delete('/products/{product}' , [ProductController::class,'destroy'])->middleware('can:delete,App\Models\Product');
+
 
     Route::get('/send_email' , [EmailController::class,'send']);
 });
