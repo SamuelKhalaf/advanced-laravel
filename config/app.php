@@ -171,6 +171,7 @@ return [
         \Maatwebsite\Excel\ExcelServiceProvider::class,
         wdd\slug\SlugServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        \Srmklive\PayPal\Providers\PayPalServiceProvider::class
     ])->toArray(),
 
     /*

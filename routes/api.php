@@ -6,6 +6,8 @@ use App\Http\Controllers\Api\ExcelController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\RegisterController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\PayPalController;
+use App\Http\Controllers\SmsController;
 use App\Http\Controllers\SocialiteController;
 use App\Http\Controllers\ThirdPartyController;
 use Illuminate\Http\Request;
@@ -50,3 +52,9 @@ Route::get('auth/google/callback' , [SocialiteController::class,'handleGoogleCal
 
 Route::get('auth/facebook' , [SocialiteController::class,'redirectToFacebook']);
 Route::get('auth/facebook/callback' , [SocialiteController::class,'handleFacebookCallback']);
+
+Route::get('payment',[PayPalController::class,'payment']);
+Route::get('cancel',[PayPalController::class,'cancel']);
+Route::get('payment/success',[PayPalController::class,'success']);
+
+Route::get('send-sms',[SmsController::class,'sms']);

@@ -13,7 +13,9 @@
         "laravel/tinker": "^2.8",
         "laraveldaily/laravel-charts": "^0.2.3",
         "maatwebsite/excel": "^3.1",
-        "seyyedam7/laravel-html-parser": "^2.2"
+        "seyyedam7/laravel-html-parser": "^2.2",
+        "srmklive/paypal": "^3.0",
+        "vonage/client": "^4.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
