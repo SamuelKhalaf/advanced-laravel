@@ -67,3 +67,5 @@ Route::get('payment/success',[PayPalController::class,'success']);
 Route::get('send-sms',[SmsController::class,'sms']);
 
 Route::get('queued-jobs' , [QueuedJobsController::class,'index']);
+
+Route::get('reduceStock/{id}' , [mainController::class,'reduceStock']);
