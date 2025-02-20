@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\RegisterController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\PayPalController;
+use App\Http\Controllers\QueuedJobsController;
 use App\Http\Controllers\SmsController;
 use App\Http\Controllers\SocialiteController;
 use App\Http\Controllers\ThirdPartyController;
@@ -64,3 +65,5 @@ Route::get('cancel',[PayPalController::class,'cancel']);
 Route::get('payment/success',[PayPalController::class,'success']);
 
 Route::get('send-sms',[SmsController::class,'sms']);
+
+Route::get('queued-jobs' , [QueuedJobsController::class,'index']);
